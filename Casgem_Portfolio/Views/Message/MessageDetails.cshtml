@@ -1,0 +1,32 @@
+﻿@model Casgem_Portfolio.Models.Entities.TblMessage
+
+@{
+    ViewBag.Title = "MessageDetails";
+    Layout = "~/Views/Shared/_PortfolioAdminLayout.cshtml";
+}
+
+<h2>Mesaj Detayları</h2>
+
+@*Konu : @Html.DisplayFor(x => x.MessageSubject)
+    <br />
+    Gönderen : @Html.DisplayFor(x => x.NameSurname)
+    <br />
+    Mail Adresi : @Html.DisplayFor(x => x.SenderMail)
+    <br />
+    Mesaj : @Html.DisplayFor(x => x.Content)*@
+<div class="map-content-9">
+    <div class="twice">
+        <input type="text" class="form-control" value="@Html.DisplayFor(x => x.NameSurname)">
+    </div>
+    <br />
+    <div class="twice">
+        <input type="email" class="form-control" value="@Html.DisplayFor(x => x.SenderMail)">
+    </div>
+    <br />
+    <div class="twice">
+        <input type="text" class="form-control" value="@Html.DisplayFor(x => x.MessageSubject)">
+    </div>
+    <br />
+<textarea name="w3lMessage" class="form-control"> @Html.DisplayFor(x => x.Content) </textarea>
+</div>
+
