@@ -1,0 +1,37 @@
+﻿@using Casgem_Portfolio.Models.Entities
+@model List<TblReference>
+
+@{
+    ViewBag.Title = "List";
+    Layout = "~/Views/Shared/_PortfolioAdminLayout.cshtml";
+    int count = 0;
+}
+
+<h1 class="text-center text-danger">Referans Listesi</h1>
+
+<table class="table table-bordered">
+    <tr>
+        <th>#</th>
+        <th>Referans Adı</th>
+        <th>Şehir</th>
+        <th>Mesaj</th>
+        <th>Sil</th>
+        <th>Güncelle</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        count++;
+        <tr>
+            <td>@count</td>
+            <td>@item.ReferenceName</td>
+            <td>@item.ReferenceCity</td>
+            <td>@item.ReferenceMessage</td>            
+            <td>@Html.ActionLink("Sil", "DeleteReferances", new { id = @item.ReferenceID }, new { @class = "btn btn-danger", onclick = "return confirm('Mesajı Gerçekten Silmek İstiyor Musunuz?')" }) </td>
+            <td><a href="/Referances/UpdateReferances/@item.ReferenceID" class="btn btn-warning">Mesajı Aç</a></td>
+        </tr>
+
+    }
+</table>
+
+<a href="/Referances/AddReferances" class="btn btn-success"> Yeni Referans Girişi </a>

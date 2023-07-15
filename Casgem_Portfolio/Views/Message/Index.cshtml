@@ -29,12 +29,12 @@
             <td>@item.SenderMail</td>
             <td>@item.MessageSubject</td>
             <td>@item.Content</td>
-            <td><a href="/Message/DeleteMessage/@item.MessageID" class="btn btn-danger">Sil</a></td>
+            <td>@Html.ActionLink("Sil", "DeleteMessage", new { id = @item.MessageID }, new { @class = "btn btn-danger", onclick = "return confirm('Mesajı Gerçekten Silmek İstiyor Musunuz?')" }) </td>
             <td><a href="/Message/MessageDetails/@item.MessageID" class="btn btn-warning">Mesajı Aç</a></td>
         </tr>
 
     }
 </table>
 
-<a href="/Service/AddService" class="btn btn-success"> Yeni Hizmet Girişi </a>
+<a href="/Message/AddMessage" class="btn btn-success"> Yeni Mesaj Girişi </a>
 

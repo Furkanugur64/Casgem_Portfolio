@@ -6,89 +6,92 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <title>Sidebar 01</title>
+    <title>Admin Panel</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="~/Templates/sidebar-01/css/style.css">
+
+    @*   *@
+    <link rel="stylesheet" href="~/Templates/carousel-12/fonts/icomoon/style.css">
+    <link rel="stylesheet" href="~/Templates/carousel-12/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="~/Templates/carousel-12/css/bootstrap.min.css">
+    <link rel="stylesheet" href="~/Templates/carousel-12/css/style.css">
 </head>
-  <body>
+<body>
 
-      <div class="wrapper d-flex align-items-stretch">
-          <nav id="sidebar">
-              <div class="p-4 pt-5">
-                  <a href="#" class="img logo rounded-circle mb-5" style="background-image: url(); background-image: url('../../templates/sidebar-01/images/logo.jpg'); "></a>
-                  <ul class="list-unstyled components mb-5">
+    <div class="wrapper d-flex align-items-stretch">
+        <nav id="sidebar">
+            <div class="p-4 pt-5">
+                <a href="#" class="img logo rounded-circle mb-5" style="background-image: url(); background-image: url('../../templates/sidebar-01/images/admin.jpg'); "></a>
+                <ul class="list-unstyled components mb-5">
 
-                      <li class="active"><a href="#">Öne Çıkanlar</a></li>
-                      <li><a href="#">Ben Kimim ? </a></li>
-                      <li><a href="#">Cv Açıklaması</a></li>
-                      <li><a href="/Service/Index/">Hizmetlerim</a></li>
-                      <li><a href="#">İstatistikler</a></li>
-                      <li><a href="#">Referanslarım</a></li>
-                      <li><a href="#">Projelerim</a></li>
-                      <li><a href="#">İletişim</a></li>
-                      <li><a href="/Message/Index/">Mesajlar</a></li>
-                      <li><a href="#">Ayarlar</a></li>
-                      <li><a href="#">Çıkış Yap</a></li>
-                  </ul>
+                    <li class="active"><a href="#">Öne Çıkanlar</a></li>
+                    <li><a href="/Whoami/Index/">Ben Kimim ? </a></li>
+                    <li><a href="/Service/Index/">Hizmetlerim</a></li>
+                    <li><a href="/Statistic/Index/">İstatistikler</a></li>
+                    <li><a href="/Referances/List/">Referanslarım</a></li>
+                    <li><a href="/Message/Index/">Mesajlar</a></li>
+                    <li><a href="/Login/Index/">Çıkış Yap</a></li>
+                </ul>
 
-                  <div class="footer">
-                      <p>
-                          <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                          Copyright &copy;
-                          <script>document.write(new Date().getFullYear());</script> Tüm Hakları Saklıdır
-                          <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                      </p>
-                  </div>
+                
 
-              </div>
-          </nav>
+            </div>
+        </nav>
 
-          <!-- Page Content  -->
-          <div id="content" class="p-4 p-md-5">
+        <!-- Page Content  -->
+        <div id="content" class="p-4 p-md-5">
 
-              <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                  <div class="container-fluid">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
 
-                      <button type="button" id="sidebarCollapse" class="btn btn-primary">
-                          <i class="fa fa-bars"></i>
-                          <span class="sr-only">Toggle Menu</span>
-                      </button>
-                      <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                          <i class="fa fa-bars"></i>
-                      </button>
+                    <button type="button" id="sidebarCollapse" class="btn btn-primary">
+                        <i class="fa fa-bars"></i>
+                        <span class="sr-only">Toggle Menu</span>
+                    </button>
+                    <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fa fa-bars"></i>
+                    </button>
 
-                      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                          <ul class="nav navbar-nav ml-auto">
-                              <li class="nav-item active">
-                                  <a class="nav-link" href="#">Siteye Git</a>
-                              </li>
-                              <li class="nav-item">
-                                  <a class="nav-link" href="#">Cv'mi İndir</a>
-                              </li>
-                              <li class="nav-item">
-                                  <a class="nav-link" href="#">İstatistikler</a>
-                              </li>
-                              <li class="nav-item">
-                                  <a class="nav-link" href="#">Mesajlar</a>
-                              </li>
-                          </ul>
-                      </div>
-                  </div>
-              </nav>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="nav navbar-nav ml-auto">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="/Portfolio/Index/">Siteye Git</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="~/Assest/cv.pdf" class="nav-link" download>CV'mi İndir</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/Statistic/Index/">İstatistikler</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/Message/Index/">Mesajlar</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
 
 
-              @RenderBody()
-          </div>
-      </div>
+            @RenderBody()
+        </div>
+    </div>
 
-      <script src="~/Templates/sidebar-01/js/jquery.min.js"></script>
-      <script src="~/Templates/sidebar-01/js/popper.js"></script>
-      <script src="~/Templates/sidebar-01/js/bootstrap.min.js"></script>
-      <script src="~/Templates/sidebar-01/js/main.js"></script>
-      <script src="~/Templates/alexander-starter/assets/js/bootstrap.min.js"></script>
-  </body>
+    <script src="~/Templates/sidebar-01/js/jquery.min.js"></script>
+    <script src="~/Templates/sidebar-01/js/popper.js"></script>
+    <script src="~/Templates/sidebar-01/js/bootstrap.min.js"></script>
+    <script src="~/Templates/sidebar-01/js/main.js"></script>
+    <script src="~/Templates/alexander-starter/assets/js/bootstrap.min.js"></script>
+
+    @* *@
+
+    <script src="~/Templates/carousel-12/js/jquery-3.3.1.min.js"></script>
+    <script src="~/Templates/carousel-12/js/popper.min.js"></script>
+    <script src="~/Templates/carousel-12/js/bootstrap.min.js"></script>
+    <script src="~/Templates/carousel-12/js/owl.carousel.min.js"></script>
+    <script src="~/Templates/carousel-12/js/main.js"></script>
+</body>
 </html>

@@ -16,6 +16,7 @@ namespace Casgem_Portfolio.Controllers
         {
             var values= db.TblMessage.ToList();
             return View(values);
+            
         }
 
         public ActionResult DeleteMessage(int id)
@@ -30,6 +31,20 @@ namespace Casgem_Portfolio.Controllers
         {
             var value=db.TblMessage.Find(id);
             return View(value);
+        }
+
+        [HttpGet]
+        public ActionResult AddMessage()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult AddMessage(TblMessage message)
+        {
+            db.TblMessage.Add(message);
+            db.SaveChanges();
+            return RedirectToAction("Index");
         }
     }
 }

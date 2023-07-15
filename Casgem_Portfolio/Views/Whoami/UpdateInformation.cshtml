@@ -1,0 +1,22 @@
+﻿@model Casgem_Portfolio.Models.Entities.TblInformation
+
+@{
+    ViewBag.Title = "UpdateInformation";
+    Layout = "~/Views/Shared/_PortfolioAdminLayout.cshtml";
+}
+
+<h2 class="text-center">Yeni Referans Güncelleme Sayfası</h2>
+
+<br />
+<form method="post">
+    @Html.HiddenFor(x => x.İnformationID)
+    <label>Referans Adı:</label>
+    @Html.TextBoxFor(x => x.İnformationTitle, new { @class = "form-control" })
+    <br />
+    <label>Şehir:</label>
+    @Html.TextAreaFor(x => x.İnformationContent, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-info">Güncelle</button>
+</form>
+<br />
+

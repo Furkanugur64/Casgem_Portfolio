@@ -1,0 +1,28 @@
+﻿@using Casgem_Portfolio.Models.Entities
+@model List<TblInformation>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_PortfolioAdminLayout.cshtml";
+}
+
+<table class="table table-bordered">
+    <tr>
+        <th>#</th>
+        <th>Başlık</th>
+        <th>İçerik</th>
+        <th>Güncelle</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.İnformationID</td>
+            <td>@item.İnformationTitle</td>
+            <td>@item.İnformationContent</td>
+            <td><a href="/Whoami/UpdateInformation/@item.İnformationID" class="btn btn-warning">Güncelle</a></td>
+        </tr>
+
+    }
+</table>
+

@@ -1,0 +1,26 @@
+﻿
+@{
+    ViewBag.Title = "AddMessage";
+    Layout = "~/Views/Shared/_PortfolioAdminLayout.cshtml";
+}
+
+<h2>Yeni Mesaj Ekleme Sayfası</h2>
+
+<br />
+<form method="post">
+    <label>Gönderen Adı:</label>
+    <input type="text" class="form-control" name="NameSurname" />
+    <br />
+    <label>Gönderen Mail:</label>
+    <input type="text" class="form-control" name="SenderMail" />
+    <br />
+    <label>Konu:</label>
+    <input type="text" class="form-control" name="MessageSubject" />
+    <br />
+    <label>Mesaj İçeriği:</label>
+    <input type="text" class="form-control" name="Content" />
+    <br />
+    <button class="btn btn-info">Kaydet</button>
+</form>
+<br />
+
